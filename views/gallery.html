@@ -1,0 +1,6 @@
+{{$apiPath:=.Api}}
+{{ range $key, $value := .Images }}
+<a href="{{$apiPath}}{{$value}}"><img src="{{$apiPath}}{{$value}}" alt="Photo {{$key}}" /></a>
+
+{{ end }}
+
