@@ -28,7 +28,7 @@ func main() {
 	app.AttachView(view.HTML("./views", ".html").Layout("layout.html").Reload(true))
 	app.Get("/gallery/{id}", func(ctx context.Context) {
 		Res := Result{}
-		apiUrl := "http://localhost:8080"
+		apiUrl := "https://yourlaptop.in.ua"
 		_, err := resty.R().
 			SetQueryString("type=Gallery&id=" + ctx.Params().Get("id")).
 			SetResult(&Res).Get(apiUrl+"/api/content")
